@@ -1,0 +1,188 @@
+:root {
+    --bg-base: #09090b;
+    --bg-card: #121215;
+    --bg-card-hover: #18181b;
+    --border-subtle: #27272a;
+    --text-main: #fafafa;
+    --text-muted: #a1a1aa;
+    --accent-lime: #a3e635;
+    --accent-lime-hover: #84cc16;
+    --accent-lime-soft: rgba(163, 230, 53, 0.12);
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-image: radial-gradient( circle at 50% 0%, #161815 0%, var(--bg-base) 55%);
+    background-repeat: no-repeat;
+}
+
+.font-mono {
+    font-family: "JetBrains Mono", monospace;
+}
+
+
+/* Navbar */
+
+.navbar-custom {
+    background-color: rgba(9, 9, 11, 0.82);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+}
+
+.nav-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-lime);
+}
+
+
+/* Botones */
+
+.btn-lime {
+    background-color: var(--accent-lime);
+    color: #09090b;
+    font-weight: 600;
+    border: 1px solid var(--accent-lime);
+    border-radius: 6px;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-lime:hover {
+    background-color: var(--accent-lime-hover);
+    border-color: var(--accent-lime-hover);
+    color: #09090b;
+}
+
+.btn-outline-subtle {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-subtle:hover {
+    background-color: var(--bg-card-hover);
+    border-color: #3f3f46;
+    color: var(--text-main);
+}
+
+
+/* Hero & Avatar */
+
+.eyebrow-text {
+    color: var(--accent-lime);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.avatar-ring {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid var(--accent-lime);
+    box-shadow: 0 0 28px rgba(163, 230, 53, 0.22);
+    background-color: var(--bg-card);
+}
+
+.avatar-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Tarjetas de Proyectos */
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.project-card:hover {
+    border-color: var(--accent-lime);
+    transform: translateY(-3px);
+}
+
+.project-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: var(--accent-lime-soft);
+    color: var(--accent-lime);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+
+/* Habilidades y Barras de Progreso */
+
+.skill-pill {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.skill-pill.highlight {
+    background-color: var(--accent-lime-soft);
+    border-color: rgba(163, 230, 53, 0.35);
+    color: var(--accent-lime);
+}
+
+.progress-custom {
+    height: 6px;
+    background-color: #1f1f23;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.progress-bar-lime {
+    background-color: var(--accent-lime);
+}
+
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--text-main);
+}
